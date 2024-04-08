@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 
+
+
 .slider {
   width: 100vw;
   height: 100vh;
@@ -164,7 +166,7 @@
 }
 .slider__text-item-head {
   top: -0.5em;
-  transform: translateZ(3em);
+  transform: translateZ(15em);
 }
 .slider__text-item-info {
   bottom: 0;
@@ -173,7 +175,7 @@
   min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
-  transform: translateZ(2em);
+  transform: translateZ(15em);
 }
 .slider__text-item--active h3, .slider__text-item--active p {
   transform: translateX(0);
