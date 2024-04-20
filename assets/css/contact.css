@@ -172,8 +172,9 @@
   }
   .nav ul li a{
     font-family: 'Montserrat', sans-serif;
-    font-size: 9vh;
+    font-size: 5vh;
     text-transform: uppercase;
+    text-decoration: none;
     line-height: 1.2;
     font-weight: 800;
     display: inline-block;
@@ -181,6 +182,7 @@
     color: #ececee;
     transition: all 250ms linear;
   }
+  
   .nav ul li a:hover{
     text-decoration: none;
     color: #ffeba7;
@@ -228,15 +230,15 @@
   
   
   .logo {
-      position: absolute;
-      top: 60px;
-      left: 50px;
-      display: block;
-      z-index: 11;
-      transition: all 250ms linear;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    display: block;
+    z-index: 11;
+    transition: all 250ms linear;
   }
   .logo img {
-      display: block;
+    display: block;
   }
   
   
@@ -253,6 +255,6 @@
       right: 30px;
     }
     .nav ul li a{
-      font-size: 8vh;
+      font-size: 4vh;
     }
   }
