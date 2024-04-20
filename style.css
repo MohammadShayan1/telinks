@@ -361,7 +361,7 @@ a:hover, a:focus {
 } */
 
 .slider {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   perspective: 1000px;
@@ -369,11 +369,11 @@ a:hover, a:focus {
 }
 .slider::before, .slider::after {
   content: '';
-  /* left: -1vw; */
+  left: -1vw;
   top: -1vh;
   display: block;
   position: absolute;
-  width: 100vw;
+  width: 102vw;
   height: 102vh;
   background-position: center;
   background-size: cover;
@@ -423,7 +423,7 @@ a:hover, a:focus {
 .slider__images-item img {
   display: block;
   position: relative;
-  /* left: -1em; */
+  left: -1em;
   top: -1em;
   width: calc(100% + 1em * 2);
   height: calc(100% + 1em * 2);
