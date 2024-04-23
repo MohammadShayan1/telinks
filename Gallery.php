@@ -1,44 +1,13 @@
-<!doctype html>
-<html lang="en">
+<?php
 
-<head>
-    <title>Gallery</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+$PageTitle="TE-Links || Gallery";
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="../css/gallery.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-</head>
+function customPageHeader(){?>
+  <link rel="stylesheet" href="./assets/css/gallery.css">
+<?php }
 
-<body>
-    <header>
-      <header>
-         <section>
-             <a href="../../index.html" class="logo" >
-               <img class="sticky-top" style="position: fixed; top: 5%; height: 75px;" src="../imgs/Original.png" alt="TE LINKS Logo">
-             </a>
-             <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-       <label for="menu-icon"></label>
-       <nav class="nav"> 		
-           <ul class="pt-5">
-               <li><a href="../../index.html">Home</a></li>
-               <li><a href="./member.html">Member</a></li>
-               <li><a href="./Gallery.html">Gallery</a></li>
-               <li><a href="./Contact.html">Contact</a></li>
-           </ul>
-       </nav>
-         </section>
-     </header>
-    </header>
+include_once('header.php');
+?>
     <main>
         <div class="container" data-aos="fade-up"
         data-aos-duration="1000">
@@ -264,69 +233,10 @@
             </div>
          </div>
     </main>
-    <footer class="py-4">
-      <div class="container" data-aos="fade-up"
-          data-aos-duration="1000">
-          <div class="row align-items-center py-4">
-            <div class="col-12 col-lg-3 text-center text-lg-start"><img alt="TE LINKS Logo"
-               class="img-fluid mb-3" height=""
-               src="../imgs/telinkslogo.png" width="300"></div>
-              <div class="col-12 col-lg-6 navbar-expand text-center">
-                  <ul class="list-unstyled d-block d-lg-flex justify-content-center mb-3 mb-lg-0">
-                     <li class="nav-item">
-                        <a class="text-dark text-decoration-none me-lg-3" href="../../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-dark text-decoration-none me-lg-3" href="./member.html">Become a Member</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-dark text-decoration-none me-lg-3" href="./Gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-dark text-decoration-none" href="./Contact.html">Contact</a>
-                    </li>
-                  </ul>
-              </div>
-              <div class="col-12 col-lg-3 text-center text-lg-end">
-                  <a class="me-2" href=""><svg class="bi bi-pinterest text-warning" fill="currentColor" height="16"
-                          viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                              d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z">
-                          </path>
-                      </svg></a> <a class="me-2" href=""><svg class="bi bi-twitter text-warning" fill="currentColor"
-                          height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-                          </path>
-                      </svg></a> <a class="me-2" href=""><svg class="bi bi-facebook text-warning" fill="currentColor"
-                          height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-                          </path>
-                      </svg></a>
-              </div>
-          </div>
-          <div class="row pb-3">
-              <div class="col-12 text-center small text-muted">
-                  © 2024 <a class="d-block d-lg-inline text-muted mx-1"
-                  href="https://MohammadShayan.com"> MohammadShayan.com</a> All rights reserved. 
-              </div>
-          </div>
-      </div>
-  </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-        <script src="../js/gallery.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-         AOS.init();
-       </script>
-</body>
-
-</html>
+    <?php
+    function customPageFooter(){?>
+         <script src="./assets/js/gallery.js"></script>
+        <?php
+    }
+    include_once('footer.php');
+?>
