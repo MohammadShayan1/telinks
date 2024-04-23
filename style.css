@@ -728,34 +728,49 @@ img.img-fluid.mb-3 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /* Add drop shadow effect for depth */
 }
 
+.oursponsors{
+  background-color: #818078;
+  color: #daddd8;
+}
+
 .imggreyout{
-  opacity: 0.5;
-  filter: brightness(0.5)  grayscale(1);
+  width: 80%;
+  opacity: 0.8;
+  filter:  brightness(0.2) grayscale(1);
+  transition-duration: 1000ms;
 }
 
-.platform-list{
-  width: 4000px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  max-width: 1200px;
+.imggreyout:hover{
+  opacity: 1;
+  filter: grayscale(0);
+  transition-duration: 1000ms;
+}
+.marquee {
   overflow: hidden;
-  animation: platformslideshow 50s linear infinite;
-  transition: transform 0.5s;
 }
 
-@keyframes platformslideshow{
+.platform-inner{
+  display: flex;
+  animation: marquee-slide 30s linear infinite;
+}
+.platform-inner:hover {
+  display: flex;
+  animation: marquee-slide 30s linear infinite paused;
+}
+.platform-list {
+  display: flex;
+}
+
+/* Define the animation */
+@keyframes marquee-slide {
   0% {
-    transform: translateX(0);
+      transform: translateX(0%);
   }
   100% {
-    transform: translateX(-3000px);
+      transform: translateX(-100%);
   }
 }
+
 
 /* Footer Styling */
 footer {
