@@ -3,7 +3,7 @@
 $PageTitle="TE-Links || Home";
 
 function customPageHeader(){?>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 <?php }
 
 include_once('header.php');
