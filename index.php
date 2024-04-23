@@ -404,12 +404,12 @@ include_once('header.php');
                             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat erat
                                 quis pulvinar semper. Cras commodo vitae libero ut consequat.</p>
                             <div class="mx-auto mt-3">
-                                <form class="row g-3">
+                                <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
                                     <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Full name" type="text">
+                                        <input class="form-control bg-light" placeholder="Full name" name="nname" type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Email address" type="text">
+                                        <input class="form-control bg-light" placeholder="Email address" name="nemail" type="text" required>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-grid">
