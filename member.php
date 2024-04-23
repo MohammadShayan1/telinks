@@ -1,9 +1,9 @@
 <?php
 
-$PageTitle="TE-Links || Memeber";
+$PageTitle="TE-Links || Member";
 
 function customPageHeader(){?>
-  <link rel="stylesheet" href="./assets/css/member.css">
+  <link rel="stylesheet" href="../assets/css/member.css">
 <?php }
 
 include_once('header.php');

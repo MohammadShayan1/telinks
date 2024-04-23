@@ -361,7 +361,15 @@ a:hover, a:focus {
     display: none;
   }
 } */
-
+/* Body Styling */
+body {
+  background-color: var(--primary-color); /* Light Yellow background */
+  color: var(--text-color); /* Dark Gray text color */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; Modern font for a futuristic look */
+  font-family: "Reem Kufi Fun", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 /* Footer Styling */
 footer {
     background-color: var(--secondary-color); /* Deep Blue background for the footer */

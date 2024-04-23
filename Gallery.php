@@ -3,7 +3,9 @@
 $PageTitle="TE-Links || Gallery";
 
 function customPageHeader(){?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
   <link rel="stylesheet" href="./assets/css/gallery.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <?php }
 
 include_once('header.php');
@@ -19,29 +21,29 @@ include_once('header.php');
             <div class="portfolio-menu mt-2 mb-4">
                <ul>
                   <li class="btn btn-outline-dark active" data-filter="*">All</li>
-                  <li class="btn btn-outline-dark" data-filter=".gts">Counsel Hour</li>
-                  <li class="btn btn-outline-dark" data-filter=".lap">Self Investment Hour</li>
-                  <li class="btn btn-outline-dark text" data-filter=".selfie">Others</li>
+                  <li class="btn btn-outline-dark" data-filter=".ch">Counsel Hour</li>
+                  <li class="btn btn-outline-dark" data-filter=".sih">Self Investment Hour</li>
+                  <li class="btn btn-outline-dark text" data-filter=".other">Others</li>
                </ul>
             </div>
             <div class="portfolio-item row">
                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                  <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                  <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="sih"> 
                   <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" alt="">
                   </a>
                </div>
                <div class="item gts col-lg-3 col-md-4 col-6 col-sm" >
-                  <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                  <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="sih"> 
                   <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" alt="">
                   </a>
                </div>
                <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                  <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                  <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="other">
                   <img class="img-fluid" src="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" alt="">
                   </a>
                </div>
                <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                  <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                  <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="ch">
                   <img class="img-fluid" src="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" alt="">
                   </a>
                </div>
