@@ -387,12 +387,12 @@ img.img-fluid.mb-3 {
 
 .platform-inner{
   display: flex;
-  animation: marquee-slide 30s linear infinite;
+  animation: marquee-slide 20s linear infinite;
 }
-.platform-inner:hover {
+/* .platform-inner:hover {
   display: flex;
   animation: marquee-slide 30s linear infinite paused;
-}
+} */
 .platform-list {
   display: flex;
 }
