@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* @import url("https://fonts.googleapis.com/css?family=Lora:700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans"); */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
 /* Custom Theme Colors */
 :root {
   --primary-color: #daddd8; /* Light Yellow */
@@ -181,7 +182,8 @@ html {
   transition-delay: 50ms;
 }
 .nav ul li a{
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Reem Kufi Fun", sans-serif;
   font-size: 5vh;
   text-transform: uppercase;
   text-decoration: none;
@@ -474,7 +476,7 @@ a:hover, a:focus {
   background-color: #1c1c1c4b;
 }
 .slider__text-item p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Reem Kufi Fun", sans-serif;
   padding: 1em;
   color: #fafaff;
   text-align: center;
@@ -671,7 +673,8 @@ a:hover, a:focus {
 body {
   background-color: var(--primary-color); /* Light Yellow background */
   color: var(--text-color); /* Dark Gray text color */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font for a futuristic look */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; Modern font for a futuristic look */
+  font-family: "Reem Kufi Fun", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -725,6 +728,34 @@ img.img-fluid.mb-3 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /* Add drop shadow effect for depth */
 }
 
+.imggreyout{
+  opacity: 0.5;
+  filter: brightness(0.5)  grayscale(1);
+}
+
+.platform-list{
+  width: 4000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  animation: platformslideshow 50s linear infinite;
+  transition: transform 0.5s;
+}
+
+@keyframes platformslideshow{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3000px);
+  }
+}
 
 /* Footer Styling */
 footer {
