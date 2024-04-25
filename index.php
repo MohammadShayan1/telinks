@@ -401,8 +401,7 @@ include_once('header.php');
                         <div class="col-lg-8">
                             <span class="text-muted">Newsletter</span>
                             <h2 class="display-5 fw-bold">Subscribe Today</h2>
-                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat erat
-                                quis pulvinar semper. Cras commodo vitae libero ut consequat.</p>
+                            <p class="lead"><q>Be the first to find out! Subscribe to our newsletter to get interesting stories, professional advice, and up-to-date news sent right to your inbox.</q></p>
                             <div class="mx-auto mt-3">
                                 <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
                                     <div class="col-md-4">
