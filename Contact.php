@@ -38,8 +38,8 @@ include_once('header.php');
                                 <p>telinks21@gmail.com</p>
                             </div>
                             <div class="mb-4">
-                                <h5>Socials</h5><a class="me-2" href=""><i class='fab fa-instagram' style='font-size:24px;color:#1c1c1c'></i></a>
-                                <a class="me-2" href=""><i class='fab fa-facebook' style='font-size:24px;color:#1c1c1c'></i></a>
+                                <h5>Socials</h5><a class="me-2" href="https://www.instagram.com/te.links"><i class='fab fa-instagram' style='font-size:24px;color:#1c1c1c'></i></a>
+                                <a class="me-2" href="https://www.facebook.com/te.links1"><i class='fab fa-facebook' style='font-size:24px;color:#1c1c1c'></i></a>
                             </div>
                         </div>
                     </div>
