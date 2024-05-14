@@ -215,7 +215,7 @@ include_once('header.php');
                         <h2 class="pb-4 fw-bold">Have Any Questions?</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quidem eius cum
                             voluptatum quasi delectus assumenda culpa.</p><a class="btn btn-dark btn-lg mt-3"
-                            href="./assets/pages/Contact.html">Contact us</a>
+                            href="./Contact.php">Contact us</a>
                     </div>
                     <div class="col-md-7">
                         <div class="accordion" id="Questions-accordion">
@@ -394,7 +394,7 @@ include_once('header.php');
             </div>
         </section>
         <!-- Newsletter -->
-        <section class="py-5 my-md-5">
+        <section class="py-5 my-md-5" id="newsletter">
             <div class="container" data-aos="fade-up" data-aos-duration="1000">
                 <div class="text-center">
                     <div class="row justify-content-center">
@@ -405,10 +405,10 @@ include_once('header.php');
                             <div class="mx-auto mt-3">
                                 <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
                                     <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Full name" name="nname" type="text" required>
+                                        <input class="form-control bg-light" placeholder="Full name" name="nname"  type="text" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Email address" name="nemail" type="text" required>
+                                        <input class="form-control bg-light" placeholder="Email address" name="nemail" type="email" required>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="d-grid">

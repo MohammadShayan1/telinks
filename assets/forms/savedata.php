@@ -1,22 +1,49 @@
 <?php
+session_start(); // Start session to store success message  
 
 $itm_name = $_POST['nname'];
 $itm_email = $_POST['nemail'];
 
-// $server = "localhost";
-// $username = "mshayan_mscontact_db";
-// $password = "@Shayan@786";
-// $db = "mshayan_mscontact_db";
+// Database connection details
 $server = "localhost";
 $username = "root";
 $password = "";
 $db = "telinks";
 
-$con = mysqli_connect($server, $username, $password, $db);
+// Create a connection
+$con = new mysqli($server, $username, $password, $db);
 
-    $query = "INSERT INTO newsletter(name,email) VALUES ('{$itm_name}','{$itm_email}')";
-    $result = mysqli_query($con, $query);
-    $done = header("Location: ../../index.php");
 
-    mysqli_close($con);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+} else {
+    // Prepare and bind
+    $stmt = $con->prepare("INSERT INTO newsletter (n_name, n_email) VALUES (?, ?)");
+    if ($stmt) {
+        // Bind parameters
+        $stmt->bind_param("ss", $itm_name, $itm_email);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            $_SESSION['success_message'] = '<div class="alert alert-success" role="alert">
+Your message has been sent successfully!
+</div>';
+            header("Location: ../../index.php?#newsletter");
+            exit(); // Ensure script stops execution after redirect
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        // Close the statement
+        $stmt->close();
+    } else {
+        echo "Error: " . $con->error;
+    }
+}
+
+// Close the connection
+$con->close();
+
 ?>
