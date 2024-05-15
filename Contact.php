@@ -22,7 +22,7 @@ include_once('header.php');
                     <div class="row justify-content-between">
                         <div class="col-lg-6">
                             <h5 class="fw-semibold mb-3">Send us a message</h5>
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScw9Nr6qpaInnGoU4uzeIneLESunZte6RYLyKgAbzb1SIk-Bw/viewform?embedded=true" width="640" height="561" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScw9Nr6qpaInnGoU4uzeIneLESunZte6RYLyKgAbzb1SIk-Bw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                         </div>
                         <div class="col-lg-5 mt-5 mt-lg-0">
                             <div class="mb-4">
