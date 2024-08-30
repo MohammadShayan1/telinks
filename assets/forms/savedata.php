@@ -5,7 +5,7 @@ $itm_name = $_POST['nname'];
 $itm_email = $_POST['nemail'];
 
 // Database connection details
-$servername = "localhost";
+$server = "localhost";
 $username = "mshayan_telinksimg_db";
 $password = "@Shayan@786";
 $db = "mshayan_telinksimg_db";
