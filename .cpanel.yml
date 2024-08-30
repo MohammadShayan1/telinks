@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mshayan/public_html/telinks.live
+    - /bin/cp -R * $DEPLOYPATH
+  post_deploy:
+    commands:
+      - echo "Deployment completed on $(date)" >> $DEPLOYPATH/deploy.log
+      - /usr/bin/php $DEPLOYPATH/scripts/migrate.php
