@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-<?php include('database.php');?>
 <head>
 <title><?= isset($PageTitle) ? $PageTitle : "TE LINKS"?></title>
     <link rel="shortcut icon" href="./assets/imgs/telinkslogo.ico" type="image/x-icon">
