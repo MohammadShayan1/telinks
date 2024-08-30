@@ -5,14 +5,14 @@ $itm_name = $_POST['nname'];
 $itm_email = $_POST['nemail'];
 
 // Database connection details
-// $servername = "localhost";
-// $username = "mshayan_telinksimg_db";
-// $password = "@Shayan@786";
-// $dbname = "mshayan_telinksimg_db";
-$server = "localhost";
-$username = "root";
-$password = "";
-$db = "telinksimg_db";
+$servername = "localhost";
+$username = "mshayan_telinksimg_db";
+$password = "@Shayan@786";
+$dbname = "mshayan_telinksimg_db";
+// $server = "localhost";
+// $username = "root";
+// $password = "";
+// $db = "telinksimg_db";
 
 // Create a connection
 $con = new mysqli($server, $username, $password, $db);
