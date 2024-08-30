@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mshayan/public_html/telinks.live
+    - export DEPLOYPATH=/home/mshayan/public_html/telinks.live/telinks
     - /bin/cp -R * $DEPLOYPATH
   post_deploy:
     commands:
