@@ -36,6 +36,8 @@ include 'header.php';
                     </table>
 
                     <a href="newslettercsv.php" class="btn btn-primary">Download CSV</a>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; 
+$conn->close();
+?>
 
 

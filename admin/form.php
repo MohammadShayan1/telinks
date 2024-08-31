@@ -64,4 +64,4 @@ include 'header.php';
 </form>
 <?php 
 include 'footer.php';
- ?>
+$conn->close(); ?>
