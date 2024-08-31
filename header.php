@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title><?= isset($PageTitle) ? $PageTitle : "TE LINKS"?></title>
-    <link rel="shortcut icon" href="./assets/imgs/logo.gif" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/imgs/telinkslogo.ico" type="image/x-icon">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
