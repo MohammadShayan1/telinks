@@ -13,9 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Replace with your own admin credentials
     $admin_username = 'admintelinks';
-    $admin_password = 'telinksadmin@#$786'; // Use hashed passwords in a real application
+    $admin_password = 'telinksadmin@#$786';
+    $president_username = 'president@telinks.live'
+    $president_password =  '~267OqD~ShN3'
+    $vicepresident_username = 'vicepresident@telinks.live'
+    $videpresident_password =  'u6cPsHq{$.4u'
+      // Use hashed passwords in a real application
 
-    if ($username === $admin_username && $password === $admin_password) {
+    if ($username === $admin_username && $password === $admin_password || $username === $president_username && $password === $president_password || $username === $vicepresident_username && $password === $vicepresident_password) {
         $_SESSION['admin_logged_in'] = true;
         header("Location: admin_dashboard.php");
         exit;
