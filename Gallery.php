@@ -24,8 +24,10 @@ $images = $query->fetchAll(PDO::FETCH_ASSOC);
         <div class="portfolio-menu mt-2 mb-4">
             <ul>
                 <li class="btn btn-outline-dark active" data-filter="*">All</li>
+                <li class="btn btn-outline-dark" data-filter=".climatech">Climatech</li>
                 <li class="btn btn-outline-dark" data-filter=".ch">Counsel Hour</li>
                 <li class="btn btn-outline-dark" data-filter=".sih">Self Investment Hour</li>
+                <li class="btn btn-outline-dark" data-filter=".olymtwo">Olympiad 2.0</li>
                 <li class="btn btn-outline-dark" data-filter=".iftar">Iftar Drive</li>
                 <li class="btn btn-outline-dark" data-filter=".plant">Plantation Drive</li>
                 <li class="btn btn-outline-dark text" data-filter=".other">Others</li>

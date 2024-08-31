@@ -82,8 +82,10 @@ include 'header.php';
         <label for="category" class="form-label">Category:</label>
         <select class="form-select" id="category" name="category" required>
             <option value="" disabled selected>Select a category</option>
+            <option value="climatech">Climatech</option>
             <option value="ch">Counsel Hour</option>
             <option value="sih">Self Investment Hour</option>
+            <option value="olymtwo">Olympiad 2.0</option>
             <option value="iftar">Iftar Drive</option>
             <option value="plant">Plantation Drive</option>
             <option value="other">Others</option>
