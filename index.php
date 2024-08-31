@@ -24,18 +24,18 @@ include_once('header.php');
                     <div class="slider__text">
                         <div class="slider__text-item slider__text-item--active" data-id="1">
                             <div class="slider__text-item-head">
-                                <h3>TE LINKS</h3>
-                            </div>
-                            <div class="slider__text-item-info">
-                                <p>“Bound by passion, fueled by dedication, we triumph as one”</p>
-                            </div>
-                        </div>
-                        <div class="slider__text-item" data-id="2">
-                            <div class="slider__text-item-head">
                                 <h3>WELCOME</h3>
                             </div>
                             <div class="slider__text-item-info">
                                 <p>“Embrace the journey, ignite your spark, welcome to our family”</p>
+                            </div>
+                        </div>
+                        <div class="slider__text-item " data-id="2">
+                            <div class="slider__text-item-head">
+                                <h3>TE LINKS</h3>
+                            </div>
+                            <div class="slider__text-item-info">
+                                <p>“Bound by passion, fueled by dedication, we triumph as one”</p>
                             </div>
                         </div>
                         <div class="slider__text-item" data-id="3">
