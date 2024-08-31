@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "mshayan_telinksimg_db";
-$password = "@Shayan@786";
+$password = "Q^G05I9i}H_W";
 $dbname = "mshayan_telinksimg_db";
 // $servername = "localhost";
 // $username = "root";
