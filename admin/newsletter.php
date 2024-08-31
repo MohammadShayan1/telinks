@@ -5,7 +5,7 @@ include 'database.php';
 // Create connection
 $sql = "SELECT * FROM newsletter";
 $result = $conn->query($sql);
-include 'header.php';
+include_once ('header.php');
 ?>
 
                     <h3 class="mt-5">Newsletter Submissions</h3>
