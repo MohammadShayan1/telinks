@@ -22,11 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
 
             // Generate a unique name for the file
             $target_file = $target_dir . uniqid() . "." . $imageFileType;
-
-            // File size validation (optional)
-            if ($_FILES["image"]["size"] > 5000000) { // 5MB max
-                $message = "Sorry, your file is too large.";
-            } else {
                 // Attempt to move the uploaded file
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                     // Success
@@ -47,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
                     $message .= "<br>File permissions: " . substr(sprintf('%o', fileperms($target_dir)), -4);
                     $message .= "<br>Directory exists: " . (is_dir($target_dir) ? 'Yes' : 'No');
                 }
-            }
         }
     } else {
         // Handle file upload errors
