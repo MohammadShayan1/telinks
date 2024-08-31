@@ -59,4 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
     </div>
     <button type="submit" name="add_image" class="btn btn-primary w-100">Add Image</button>
 </form>
-<?php include 'footer.php'; ?>
+<?php 
+include 'footer.php';
+ ?>
