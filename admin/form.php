@@ -1,6 +1,6 @@
-<?php include 'header.php'; 
+<?php
 // Database connection details
-include_once('database.php');
+include 'database.php';
 ?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
@@ -34,7 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
     } else {
         $message = "Upload Error: " . $_FILES['image']['error'];
     }
-}?>
+}
+include 'header.php';
+?>
 
 <h3 class="mt-4">Add New Image</h3>
 <?php if (isset($message)) echo "<p class='message'>$message</p>"; ?>

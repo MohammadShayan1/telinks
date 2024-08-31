@@ -1,13 +1,11 @@
 <?php
 // Fetch newsletter data
 // Database connection details
-include 'header.php';
-// Database connection details
-include_once('database.php');
+include 'database.php';
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 $sql = "SELECT * FROM newsletter";
 $result = $conn->query($sql);
+include 'header.php';
 ?>
 
                     <h3 class="mt-5">Newsletter Submissions</h3>
