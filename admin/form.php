@@ -1,38 +1,71 @@
 <?php
 // Database connection details
 include 'database.php';
-?>
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
-    $category = $_POST['category'];
-    $alt_text = $_POST['alt_text'];
 
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
+    $category = htmlspecialchars($_POST['category']);
+    $alt_text = htmlspecialchars($_POST['alt_text']);
+
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
         $target_dir = "uploads/";
-        $target_file = $target_dir . basename($_FILES["image"]["name"]);
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
+        $allowed_types = array("jpg", "jpeg", "png", "gif");
 
         // Validate file type
-        $allowed_types = array("jpg", "jpeg", "png", "gif");
         if (!in_array($imageFileType, $allowed_types)) {
             $message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         } else {
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                // Success
-                $stmt = $conn->prepare("INSERT INTO images (url, category, alt_text) VALUES (?, ?, ?)");
-                $stmt->bind_param("sss", $target_file, $category, $alt_text);
-                if ($stmt->execute()) {
-                    $message = "Image uploaded and added successfully!";
-                } else {
-                    $message = "Database Error: " . $stmt->error;
-                }
-                $stmt->close();
+            // Ensure the uploads directory exists
+            if (!file_exists($target_dir)) {
+                mkdir($target_dir, 0755, true);
+            }
+
+            // Generate a unique name for the file
+            $target_file = $target_dir . uniqid() . "." . $imageFileType;
+
+            // File size validation (optional)
+            if ($_FILES["image"]["size"] > 5000000) { // 5MB max
+                $message = "Sorry, your file is too large.";
             } else {
-                $message = "Error moving uploaded file: " . error_get_last()['message'];
+                // Attempt to move the uploaded file
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                    // Success
+                    $stmt = $conn->prepare("INSERT INTO images (url, category, alt_text) VALUES (?, ?, ?)");
+                    $stmt->bind_param("sss", $target_file, $category, $alt_text);
+                    if ($stmt->execute()) {
+                        $message = "Image uploaded and added successfully!";
+                    } else {
+                        $message = "Database Error: " . $stmt->error;
+                    }
+                    $stmt->close();
+                } else {
+                    // Detailed error message
+                    $message = "Error moving uploaded file: " . error_get_last()['message'];
+                    // Additional debug information
+                    $message .= "<br>Target directory: " . $target_dir;
+                    $message .= "<br>Target file: " . $target_file;
+                    $message .= "<br>File permissions: " . substr(sprintf('%o', fileperms($target_dir)), -4);
+                    $message .= "<br>Directory exists: " . (is_dir($target_dir) ? 'Yes' : 'No');
+                }
             }
         }
     } else {
-        $message = "Upload Error: " . $_FILES['image']['error'];
+        // Handle file upload errors
+        switch ($_FILES['image']['error']) {
+            case UPLOAD_ERR_INI_SIZE:
+            case UPLOAD_ERR_FORM_SIZE:
+                $message = "The uploaded file exceeds the maximum size.";
+                break;
+            case UPLOAD_ERR_PARTIAL:
+                $message = "The uploaded file was only partially uploaded.";
+                break;
+            case UPLOAD_ERR_NO_FILE:
+                $message = "No file was uploaded.";
+                break;
+            default:
+                $message = "Unknown error occurred during file upload.";
+                break;
+        }
     }
 }
 include 'header.php';
@@ -63,4 +96,5 @@ include 'header.php';
 </form>
 <?php 
 include 'footer.php';
-$conn->close(); ?>
+$conn->close();
+?>
