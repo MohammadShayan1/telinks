@@ -84,6 +84,8 @@ include 'header.php';
             <option value="" disabled selected>Select a category</option>
             <option value="ch">Counsel Hour</option>
             <option value="sih">Self Investment Hour</option>
+            <option value="iftar">Iftar Drive</option>
+            <option value="plant">Plantation Drive</option>
             <option value="other">Others</option>
             <!-- Add more categories as needed -->
         </select>
