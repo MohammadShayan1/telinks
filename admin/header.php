@@ -21,8 +21,6 @@ if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) >
 
 // Update last activity timestamp
 $_SESSION['last_activity'] = time();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -143,6 +141,6 @@ $_SESSION['last_activity'] = time();
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="container mt-4">
                     <img src="../assets/imgs/telinkslogo.png" alt="Logo">
-                    <h2>Admin Dashboard</h2>
+                    <h2><?php echo 'Welcome, ' . $_SESSION['username']; ?></h2>
                     <a href="admin_logout.php" class="logout-link">Logout</a>
                     <!-- Your additional content here -->
