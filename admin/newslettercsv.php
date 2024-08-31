@@ -5,14 +5,6 @@ header('Content-Disposition: attachment;filename=newsletter.csv');
 
 include_once('database.php');
 
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 // Query to fetch data
 $sql = "SELECT n_name, n_email FROM newsletter";
 $result = $conn->query($sql);

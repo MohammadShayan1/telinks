@@ -34,3 +34,4 @@ console.log("running");
 </body>
 
 </html>
+<?php $conn->close(); ?>

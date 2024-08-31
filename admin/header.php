@@ -22,8 +22,7 @@ if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) >
 // Update last activity timestamp
 $_SESSION['last_activity'] = time();
 
-// Database connection details
-include_once('database.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

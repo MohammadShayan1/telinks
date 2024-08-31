@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+// Database connection details
+include_once('database.php');
+?>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_image'])) {
     $category = $_POST['category'];

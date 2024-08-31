@@ -2,7 +2,8 @@
 // Fetch newsletter data
 // Database connection details
 include 'header.php';
-
+// Database connection details
+include_once('database.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 $sql = "SELECT * FROM newsletter";
@@ -38,6 +39,5 @@ $result = $conn->query($sql);
 
                     <a href="newslettercsv.php" class="btn btn-primary">Download CSV</a>
 <?php include 'footer.php'; ?>
-
 
 
