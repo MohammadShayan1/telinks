@@ -30,7 +30,9 @@
     setTimeout(function() {
         window.location.href = "admin_logout.php";
     }, logoutTime);
+console.log("running");
 </script>
+
 </body>
 
 </html>
