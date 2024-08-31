@@ -30,7 +30,7 @@ if ($con->connect_error) {
             $subject = "Thank you for subscribing to our newsletter!";
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: <no-reply@telinks.live>' . "\r\n"; // Change this to your desired sender
+            $headers .= 'From: TE LINKS <no-reply@telinks.live>' . "\r\n"; // Sender name and email
 
             // HTML email template
             $message = '
@@ -65,7 +65,7 @@ if ($con->connect_error) {
                     .header h1 {
                         font-size: 24px;
                         margin: 10px 0 5px;
-                        color: #0056A1; /* Blue color from logo */
+                        color: #0056A1; /* Blue color */
                     }
                     .header p {
                         font-size: 16px;
@@ -87,7 +87,7 @@ if ($con->connect_error) {
                         padding: 10px 25px;
                         font-size: 18px;
                         color: #ffffff;
-                        background-color: #FFCC00; /* Yellow color from logo */
+                        background-color: #FFCC00; /* Yellow color */
                         text-decoration: none;
                         border-radius: 5px;
                     }
@@ -105,7 +105,7 @@ if ($con->connect_error) {
                         margin-top: 10px;
                     }
                     .social-icons a {
-                        color: #0056A1; /* Blue color from logo */
+                        color: #0056A1; /* Blue color */
                         margin: 0 10px;
                         font-size: 24px;
                         text-decoration: none;
