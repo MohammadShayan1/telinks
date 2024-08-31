@@ -25,7 +25,7 @@
     <header>
         <section class="bg-dark">
             <a href="./index.php" class="logo">
-                <img class="sticky-top" style="position: fixed; top: 5%; height: 75px;" src="./assets/imgs/Originalcolor.png"
+                <img class="sticky-top" style="position: fixed; top: 5%; height: 75px;" src="./assets/imgs/logo.gif"
                     alt="TE LINKS Logo">
             </a>
             <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
