@@ -182,6 +182,7 @@ include_once('header.php');
                                 <h4>Ramadan Iftar Drive</h4>
                                 <p class="mt-3 mb-0">Gathering at dusk, breaking fast together, and weaving memories
                                     into every bite.</p>
+                                    <a href="Gallery.php" class="btn btn-primary">Goto Gallery</a>
                             </div>
                         </div>
                     </div>
