@@ -49,6 +49,6 @@ if ($email) {
 }
 
 // Redirect back to the homepage or a confirmation page
-header("Location: ../../index.php?#newsletter");
+header("Location: ../../assets/forms/unsubscribepage.php");
 exit();
 ?>
