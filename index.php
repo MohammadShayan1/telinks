@@ -386,35 +386,46 @@ include_once('header.php');
                 </div>
             </div>
         </section>
-        <!-- Newsletter -->
-        <section class="py-5 my-md-5" id="newsletter">
-            <div class="container" data-aos="fade-up" data-aos-duration="1000">
-                <div class="text-center">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <span class="text-muted">Newsletter</span>
-                            <h2 class="display-5 fw-bold">Subscribe Today</h2>
-                            <p class="lead"><q>Be the first to find out! Subscribe to our newsletter to get interesting stories, professional advice, and up-to-date news sent right to your inbox.</q></p>
-                            <div class="mx-auto mt-3">
-                                <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
-                                    <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Full name" name="nname"  type="text" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <input class="form-control bg-light" placeholder="Email address" name="nemail" type="email" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="d-grid">
-                                            <button class="btn btn-dark" type="submit">Subscribe</button>
-                                        </div>
-                                    </div>
-                                </form>
+      <!-- Newsletter -->
+<section class="py-5 my-md-5" id="newsletter">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <span class="text-muted">Newsletter</span>
+                    <h2 class="display-5 fw-bold">Subscribe Today</h2>
+                    <p class="lead"><q>Be the first to find out! Subscribe to our newsletter to get interesting stories, professional advice, and up-to-date news sent right to your inbox.</q></p>
+                    <div class="mx-auto mt-3">
+                        <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
+                            <div class="col-md-4">
+                                <input class="form-control bg-light" placeholder="Full name" name="nname"  type="text" required>
                             </div>
-                        </div>
+                            <div class="col-md-4">
+                                <input class="form-control bg-light" placeholder="Email address" name="nemail" type="email" required>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-grid">
+                                    <button class="btn btn-dark" type="submit">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Display success or error messages -->
+                        <?php
+                        if (isset($_SESSION['success_message'])) {
+                            echo $_SESSION['success_message'];
+                            unset($_SESSION['success_message']);
+                        }
+                        if (isset($_SESSION['error_message'])) {
+                            echo $_SESSION['error_message'];
+                            unset($_SESSION['error_message']);
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
     </main>
 <?php
     function customPageFooter(){?>
