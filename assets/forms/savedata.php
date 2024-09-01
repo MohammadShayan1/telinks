@@ -5,11 +5,14 @@ session_start(); // Start session to store success message
 $itm_name = filter_input(INPUT_POST, 'nname', FILTER_SANITIZE_STRING);
 $itm_email = filter_input(INPUT_POST, 'nemail', FILTER_SANITIZE_EMAIL);
 
-// Database connection details
-$server = "localhost";
-$username = "mshayan_telinksimg_db";
-$password = "Q^G05I9i}H_W";
-$db = "mshayan_telinksimg_db";
+// Load configuration
+$config = include('config.php');
+
+// Database connection details from config file
+$server = $config['db_host'];
+$username = $config['db_user'];
+$password = $config['db_pass'];
+$db = $config['db_name'];
 
 // Create a connection
 $con = new mysqli($server, $username, $password, $db);
@@ -17,7 +20,10 @@ $con = new mysqli($server, $username, $password, $db);
 // Check connection
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
-} else {
+}
+
+// Your existing code for database operations and email sending
+ else {
     // Prepare and bind
     $stmt = $con->prepare("INSERT INTO newsletter (n_name, n_email) VALUES (?, ?)");
     if ($stmt) {
