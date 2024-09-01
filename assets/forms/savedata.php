@@ -122,7 +122,6 @@ if ($con->connect_error) {
                                 width: 24px;
                                 height: 24px;
                             }
-                                <style>
                             .unsubscribe-link {
                                 color: #999;
                                 text-decoration: none;
@@ -156,11 +155,12 @@ if ($con->connect_error) {
                                 </div>
                             </div>
                             <div class="footer">
-                             <p>If you no longer wish to receive our emails, you can <a href="https://telinks.live/telinks/assets/forms/unsubscribe.php?email=' . urlencode($itm_email) . '" class="unsubscribe-link">unsubscribe</a> at any time.</p>
+                                <p>If you no longer wish to receive our emails, you can <a href="https://telinks.live/telinks/assets/forms/unsubscribe.php?email=' . urlencode($itm_email) . '" class="unsubscribe-link">unsubscribe</a> at any time.</p>
                             </div>
                         </div>
                     </body>
                     </html>';
+                    
 
                     // Send the email
                     if (mail($itm_email, $subject, $message, $headers)) {
