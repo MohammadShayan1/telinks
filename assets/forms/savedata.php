@@ -122,14 +122,6 @@ if ($con->connect_error) {
                                 width: 24px;
                                 height: 24px;
                             }
-                            .unsubscribe-link {
-                                color: #999;
-                                text-decoration: none;
-                                font-size: 12px;
-                            }
-                            .unsubscribe-link:hover {
-                                text-decoration: underline;
-                            }
                         </style>
                     </head>
                     <body>
@@ -141,6 +133,8 @@ if ($con->connect_error) {
                             <div class="content">
                                 <p>We are thrilled to have you on board. Stay tuned for the latest updates, exclusive offers, and much more straight to your inbox.</p>
                                 <a href="https://telinks.live/" class="button">Visit Our Website</a>
+                            </div>
+                            <div class="footer">
                                 <p>Follow us on social media for more updates!</p>
                                 <div class="social-icons">
                                     <a href="https://www.facebook.com/te.links1" target="_blank">
@@ -154,13 +148,9 @@ if ($con->connect_error) {
                                     </a>
                                 </div>
                             </div>
-                            <div class="footer">
-                                <p>If you no longer wish to receive our emails, you can <a href="https://telinks.live/telinks/assets/forms/unsubscribe.php?email=' . urlencode($itm_email) . '" class="unsubscribe-link">unsubscribe</a> at any time.</p>
-                            </div>
                         </div>
                     </body>
                     </html>';
-                    
 
                     // Send the email
                     if (mail($itm_email, $subject, $message, $headers)) {
