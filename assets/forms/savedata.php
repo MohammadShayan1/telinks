@@ -5,7 +5,10 @@ session_start(); // Start session to store success message
 $itm_name = filter_input(INPUT_POST, 'nname', FILTER_SANITIZE_STRING);
 $itm_email = filter_input(INPUT_POST, 'nemail', FILTER_SANITIZE_EMAIL);
 
-include 'config.php'
+include 'config.php';
+// Create a connection
+$con = new mysqli($server, $username, $password, $db);
+
 // Check connection
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
@@ -22,7 +25,7 @@ if ($con->connect_error) {
             $subject = "Thank you for subscribing to our newsletter!";
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: TE LINKS <no-reply@telinks.live>' . "\r\n"; // Sender name and email
+            $headers .= 'From: TE LINKS <no-reply@telinks.live>' . "\r\n"; // Change this to your desired sender
 
             // HTML email template
             $message = '
@@ -57,7 +60,7 @@ if ($con->connect_error) {
                     .header h1 {
                         font-size: 24px;
                         margin: 10px 0 5px;
-                        color: #0056A1; /* Blue color */
+                        color: #0056A1; /* Blue color from logo */
                     }
                     .header p {
                         font-size: 16px;
@@ -79,7 +82,7 @@ if ($con->connect_error) {
                         padding: 10px 25px;
                         font-size: 18px;
                         color: #ffffff;
-                        background-color: #FFCC00; /* Yellow color */
+                        background-color: #FFCC00; /* Yellow color from logo */
                         text-decoration: none;
                         border-radius: 5px;
                     }
@@ -97,7 +100,7 @@ if ($con->connect_error) {
                         margin-top: 10px;
                     }
                     .social-icons a {
-                        color: #0056A1; /* Blue color */
+                        color: #0056A1; /* Blue color from logo */
                         margin: 0 10px;
                         font-size: 24px;
                         text-decoration: none;
