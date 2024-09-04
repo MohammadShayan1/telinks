@@ -43,7 +43,6 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Close the connection
 $pdo = null;
-?>
 include_once('header.php');
 ?>
 <main>
