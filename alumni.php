@@ -12,7 +12,7 @@ function customPageHeader() { ?>
             overflow: hidden;
         }
         .profile-img {
-            width: 100%;
+            width: 50%;
             height: auto;
         }
         .member-info {
