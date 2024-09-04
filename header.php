@@ -36,6 +36,7 @@
                     <li><a href="./member.php">Member</a></li>
                     <li><a href="./Gallery.php">Gallery</a></li>
                     <li><a href="./Contact.php">Contact</a></li>
+                    <li><a href="./Alumni.php">Alumni TE LINKS</a></li>
                 </ul>
             </nav>
         </section>
