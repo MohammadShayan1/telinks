@@ -4,6 +4,33 @@ $PageTitle="TE-Links || Home";
 
 function customPageHeader(){?>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <?php
+if (isset($_SESSION['success_message'])) {
+    echo '<script>
+    Swal.fire({
+        title: "Success!",
+        text: "' . $_SESSION['success_message'] . '",
+        icon: "success",
+        confirmButtonText: "OK"
+    });
+    </script>';
+    unset($_SESSION['success_message']);
+}
+
+if (isset($_SESSION['error_message'])) {
+    echo '<script>
+    Swal.fire({
+        title: "Error!",
+        text: "' . $_SESSION['error_message'] . '",
+        icon: "error",
+        confirmButtonText: "OK"
+    });
+    </script>';
+    unset($_SESSION['error_message']);
+}
+?>
+
 <?php }
 
 include_once('header.php');
@@ -396,7 +423,7 @@ include_once('header.php');
                             <h2 class="display-5 fw-bold">Subscribe Today</h2>
                             <p class="lead"><q>Be the first to find out! Subscribe to our newsletter to get interesting stories, professional advice, and up-to-date news sent right to your inbox.</q></p>
                             <div class="mx-auto mt-3">
-                                <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post">
+                                <form action="./assets/forms/savedata.php" role="form" class="row g-3" method="post" id="newsletterForm">
                                     <div class="col-md-4">
                                         <input class="form-control bg-light" placeholder="Full name" name="nname"  type="text" required>
                                     </div>
