@@ -26,7 +26,24 @@ function customPageHeader(){?>
     </style>
   
 <?php }
+include 'database.php'
+// Set the PDO error mode to exception
+try {
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Prepare and execute SQL query
+    $stmt = $pdo->prepare("SELECT name, position, tenure, linkedin, profile_picture FROM members");
+    $stmt->execute();
+
+    // Fetch all results into an associative array
+    $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
+// Close the connection
+$pdo = null;
+?>
 include_once('header.php');
 ?>
 <main>
