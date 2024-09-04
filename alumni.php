@@ -50,7 +50,7 @@ include_once('header.php');
 <main>
     <section>
         <div class="container">
-            <h1 class="text-center my-5">Our Former Excom</h1>
+            <h1 class="text-center my-5 pt-5">Our Former Excom</h1>
             <div class="row">
                 <?php foreach ($members as $member): ?>
                     <div class="col-md-3">
