@@ -40,7 +40,7 @@ include_once('header.php');
                     <img src="images/<?php echo $member['profile_picture']; ?>" class="profile-img card-img-top" alt="<?php echo $member['name']; ?>">
                     <div class="member-info card-body">
                         <h5 class="card-title"><?php echo $member['name']; ?></h5>
-                        <p class="card-text"><?php echo $member['position']; ?></p>
+                        <p class="card-text"><?php echo "Former ".$member['position']; ?></p>
                         <p class="card-text"><small class="text-muted"><?php echo $member['tenure']; ?></small></p>
                         <a href="<?php echo $member['linkedin']; ?>" target="_blank">
                             <i class="fab fa-linkedin linkedin-icon"></i> LinkedIn
