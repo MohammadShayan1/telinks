@@ -241,6 +241,9 @@ html {
 .menu-icon:checked ~ .nav ul li:nth-child(4){
   transition-delay: 1640ms;
 }
+.menu-icon:checked ~ .nav ul li:nth-child(5){
+  transition-delay: 1720ms;
+}
 
 
 
