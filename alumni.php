@@ -12,7 +12,7 @@ function customPageHeader() { ?>
             overflow: hidden;
         }
         .profile-img {
-            width: 50%;
+            width: 100%;
             height: auto;
         }
         .member-info {
@@ -53,7 +53,7 @@ include_once('header.php');
             <h1 class="text-center my-5">Our Former Excom</h1>
             <div class="row">
                 <?php foreach ($members as $member): ?>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card member-card">
                             <img src="../telinks/admin/<?php echo htmlspecialchars($member['profile_picture']); ?>" class="profile-img card-img-top" alt="<?php echo htmlspecialchars($member['name']); ?>">
                             <div class="member-info card-body">
