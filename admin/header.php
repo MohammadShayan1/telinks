@@ -123,6 +123,11 @@ $_SESSION['last_activity'] = time();
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="member.php">
+                                Add Alumni
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="newsletter.php">
                                 Newsletter
                             </a>
