@@ -72,6 +72,7 @@ if ($stmt) {
                 <body>
                     <div class="email-container">
                         <div class="header">
+                            <img src="https://telinks.live/telinks/assets/imgs/telinkslogo.png" alt="logo">
                             <h1>Thank You!</h1>
                             <p>You have successfully subscribed to our newsletter.</p>
                         </div>
