@@ -55,11 +55,11 @@ include_once('header.php');
                 <?php foreach ($members as $member): ?>
                     <div class="col-md-4">
                         <div class="card member-card">
-                            <img src="images/<?php echo htmlspecialchars($member['profile_picture']); ?>" class="profile-img card-img-top" alt="<?php echo htmlspecialchars($member['name']); ?>">
+                            <img src="../telinks/admin/<?php echo htmlspecialchars($member['profile_picture']); ?>" class="profile-img card-img-top" alt="<?php echo htmlspecialchars($member['name']); ?>">
                             <div class="member-info card-body">
                                 <h5 class="card-title"><?php echo htmlspecialchars($member['name']); ?></h5>
                                 <p class="card-text"><?php echo "Former " . htmlspecialchars($member['position']); ?></p>
-                                <p class="card-text"><small class="text-muted"><?php echo htmlspecialchars($member['tenure']); ?></small></p>
+                                <p class="card-text"><small class="text-muted"> Tennure: <?php echo htmlspecialchars($member['tenure']); ?></small></p>
                                 <a href="<?php echo htmlspecialchars($member['linkedin']); ?>" target="_blank">
                                     <i class="fab fa-linkedin linkedin-icon"></i> LinkedIn
                                 </a>
