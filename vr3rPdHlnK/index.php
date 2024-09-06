@@ -116,7 +116,7 @@ if ($edit_mode) {
 
 <div class="container">
     <?php if (!$edit_mode): ?>
-        <h3 class="text-center">Add New Alumni</h3>
+        <h3 class="text-center">Add Alumni</h3>
     <?php else: ?>
         <h3 class="text-center">Edit Details</h3>
     <?php endif; ?>
